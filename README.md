@@ -5,8 +5,9 @@
 TAPFM integrates seamlessly with leading pathology foundation models including **UNI**, **GigaPath**, and **H-Optimus-0**. The framework demonstrates strong performance on clinically relevant mutation prediction tasks, supporting both binary and multi-label classification scenarios for actionable genetic alterations in cancer diagnosis.
 
 **Usage**
+
 Training
-```console
+```bash
 python training_tapfm.py \
     --pfm gpath \
     --target_list PIK3CA_Binary FGFR3_Binary \
