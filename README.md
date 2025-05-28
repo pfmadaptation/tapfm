@@ -7,7 +7,7 @@ TAPFM integrates seamlessly with leading pathology foundation models including *
 **Usage**
 
 Training
-```bash
+```console
 python training_tapfm.py \
     --pfm gpath \
     --target_list PIK3CA_Binary FGFR3_Binary \
@@ -18,3 +18,10 @@ python training_tapfm.py \
     --nepochs 20 \
     --lr 1e-6
 ```
+Inference
+```console
+python inference_tapfm.py
+```
+
+**Data Requirements**
+Provide slide metadata manifest with train/validation/test splits, tile coordinate specifications for patch extraction, and whole slide image files in OpenSlide-compatible formats. The framework processes slides at native resolution while maintaining memory efficiency.
