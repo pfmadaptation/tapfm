@@ -262,7 +262,7 @@ def get_cls_attention_weights_features(model, input_tensor, num_heads=24, head_d
 
         # This is the critical fix - compute average attention per image in batch
         # First, get CLS token's attention to all patch tokens
-        cls_attn = attn[:, :, 0, 1:].mean(dim=1)  # Average across heads [B, N-1]
+        cls_attn = attn[:, :, 0, 1:].mean(dim=1)  # Average across heads [B, N-1] # change 1: to 5: for h-optimus-0 as it uses 4 registers
         
         # Then sum across patches to get importance score per image
         # This gives us one value per image in the batch
